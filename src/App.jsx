@@ -1,6 +1,7 @@
 import Aside from "./components/Aside";
 import Header from "./components/Header";
 import HomePage from "./pages/HomePage";
+import Skeleton from "./components/Skeleton";
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
             <HomePage />
           </main>
         </div>
+        <Skeleton/>
       </div>
     </div>
   );
