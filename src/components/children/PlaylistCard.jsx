@@ -2,7 +2,7 @@ import playlist from '../../resources/playlist.png'
 
 const PlaylistCard = () => {
    return (
-      <div className="bg-[#ffffff10] p-5 rounded-lg">
+      <div className="bg-[#ffffff10] p-5 rounded-lg w-full max-w-[224px]">
          <img src={playlist} alt="" className="w-full" />
          <div>
             <p className="text-white text-xl font-bold mb-2 mt-6">Chill Mix</p>

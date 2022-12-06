@@ -18,7 +18,7 @@ const Skeleton = () => {
             </div>
          </div>
 
-         <div className="mt-10">
+         <div className="mt-10">z
             <p className="text-[18px] text-[#CCCCCC] font-medium">Let friends and followers on Spotify see what you’re listening to.</p>
          </div>
 
