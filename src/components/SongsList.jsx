@@ -44,6 +44,12 @@ const SongsList = () => {
             <tbody className='space-y-4'>
                <Song />
                <Song />
+               <Song />
+               <Song />
+               <Song />
+               <Song />
+               <Song />
+               <Song />
             </tbody>
          </table>
       </div>

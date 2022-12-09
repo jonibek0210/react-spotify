@@ -6,7 +6,7 @@ const HomePage = () => {
       <section className="">
          <div className="mt-[30px]">
             <h1 className="font-bold text-[39px] text-white mb-[30px]">Good afternoon</h1>
-            <div className="grid grid-cols-3 gap-4">
+            <div className="grid 2xl:grid-cols-3 grid-cols-2 gap-4 ">
                <PlaylistRec />
                <PlaylistRec />
                <PlaylistRec />
