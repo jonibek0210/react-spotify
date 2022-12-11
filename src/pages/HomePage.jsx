@@ -9,6 +9,7 @@ const HomePage = () => {
    useEffect(() => {
       const hash = window.location.hash
       let token = window.localStorage.getItem("token")
+      console.log();
 
       if (!token && hash) {
          token = hash
