@@ -3,8 +3,8 @@ import { IoCloseSharp } from "react-icons/io5";
 
 const Drawer = ({ hide }) => {
    return (
-      <div className="w-[345px] h-screen">
-         <div className="max-w-[345px] w-full h-[100vh] fixed right-0 top-0 bg-black px-5 py-[29px] hidden xl:block">
+      <div className="max-2xl:w-[270px] w-[345px] h-screen right-full absolute xl:relative xl:right-0 bg-black">
+         <div className="max-2xl:w-[270px] max-w-[345px] w-full h-[100vh] fixed right-full top-0 bg-black px-5 py-[29px] xl:right-0">
             <div className="flex justify-between items-center ">
                <div className="">
                   <p className="text-[#CCCCCC] text-[20px] font-bold">Friend Activity</p>
