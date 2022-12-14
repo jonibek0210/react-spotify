@@ -1,14 +1,19 @@
+import { useContext, useState } from "react";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { MdArrowDropDown } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
+import themaContext from "../contexts/themaContext";
 
 import ava from '../resources/ava.svg'
+
+const { Provider } = themaContext
 
 const Header = () => {
    const navigate = useNavigate()
 
    return (
-      <header className=" text-white py-5 flex items-center justify-between">
+      <Provider>
+         <header className=" text-white py-5 flex items-center justify-between">
          <div className="flex items-center">
             <button onClick={() => navigate(-1)} className="p-[4px] bg-[#00000090] rounded-full mr-5">
                <IoIosArrowBack size='32' />
@@ -23,6 +28,7 @@ const Header = () => {
             <MdArrowDropDown size='30px' />
          </div>
       </header>
+      </Provider >
    );
 }
 

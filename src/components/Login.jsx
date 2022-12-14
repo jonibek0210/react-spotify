@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import spotify from "../contexts/spotifycontext";
-
+   
 const Login = () => {
    const { CLIENT_ID, REDIRECT_URI, AUTH_ENDPOINT, RESPONSE_TYPE } = useContext(spotify)
 
