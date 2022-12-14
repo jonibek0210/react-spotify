@@ -9,11 +9,9 @@ import { NavLink } from 'react-router-dom'
 import { useState } from 'react';
 
 const Aside = () => {
-   const [isDark, setIsDark] = useState(true)
 
    return (
-      
-      <aside className="max-w-[310px] h-[100vh] fixed top-0 left-0 bg-black px-[30px] pt-[70px] flex-1 pb-4">
+      <aside className="max-2xl:w-[250px] max-w-[310px] h-[100vh] fixed top-0 left-0 max-lg:-left-full bg-black px-[30px] pt-[70px] flex-1 pb-4">
          <div className="border-b-[1px] bottom-solid border-[#282828]">
             <div className="flex flex-col gap-6 mb-5">
                <nav>
