@@ -9,8 +9,8 @@ const SongsList = () => {
    return (
       <div className="mt-8">
          <div className="flex justify-between items-center">
-            <div className="flex items-center gap-[40px]">
-               <button className="w-[70px] h-[70px] flex justify-center items-center bg-[#65D36E] rounded-full">
+            <div className="max-sm:gap-3 flex items-center gap-[40px]">
+               <button className="max-md:w-[50px] max-md:h-[50px] w-[70px] h-[70px] flex justify-center items-center bg-[#65D36E] rounded-full">
                   <FaPlay size="23px" />
                </button>
                <button><FiHeart size="38px" color="#ffffff" /></button>
@@ -23,20 +23,20 @@ const SongsList = () => {
             </div>
             <div className="flex items-center gap-9">
                <button><FiSearch size="22px" color="#ffffff" /></button>
-               <select className="bg-transparent text-white text-[18px] font-medium">
+               <select className="max-sm:hidden bg-transparent text-white text-[18px] font-medium">
                   <option>Custom order</option>
                   <option>Custom order</option>
                   <option>Custom order</option>
                </select>
             </div>
          </div>
-          <table className="w-full mt-11">
+         <table className="w-full mt-11 max-md:mt-6">
             <thead className='block border-b-2 border-[#666666] py-3 mb-7'>
                <tr className="flex gap-5 text-base text-[#B3B3B3]">
                   <td className="flex-0">#</td>
                   <td className="flex-auto">TITLE</td>
-                  <td className="flex-auto">ALBUM</td>
-                  <td className="flex-1">DATE ADDED</td>
+                  <td className="flex-auto max-sm:hidden">ALBUM</td>
+                  <td className="flex-1 max-sm:hidden">DATE ADDED</td>
                   <td className="flex-0"><BiTime size='24px' /></td>
                </tr>
             </thead>
