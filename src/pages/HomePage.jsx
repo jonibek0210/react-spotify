@@ -1,16 +1,16 @@
 import { useEffect, useState } from 'react';
 import PlaylistRec from '../components/children/PlaylistRec';
 import PlaylistList from '../components/PlaylistList';
-import Login from '../components/Login'
+// import Login from '../components/Login'
 
 const HomePage = () => {
    // const [data, setData] = useState([])
    const [token, setToken] = useState()
+   console.log(token);
 
    useEffect(() => {
       const hash = window.location.hash
       let token = window.localStorage.getItem("token")
-      console.log();
 
       if (!token && hash) {
          token = hash
@@ -37,17 +37,17 @@ const HomePage = () => {
    //       .then(data => console.log(data))
    // }, []);
 
-   if (!token) {
-      return (
-         <Login />
-      )
-   }
+   // if (!token) {
+   //    return (
+   //       <Login />
+   //    )
+   // }
 
    return (
       <section className="">
          <div className="mt-[30px]">
-            <h1 className="font-bold text-[39px] text-white mb-[30px]">Good afternoon</h1>
-            <div className="grid 2xl:grid-cols-3 grid-cols-2 gap-4 ">
+            <h1 className="max-sm:text-2xl font-bold text-[39px] text-white mb-[30px]">Good afternoon</h1>
+            <div className="2xl:grid-cols-3 max-sm:grid-cols-1 grid grid-cols-2 gap-4 ">
                <PlaylistRec />
                <PlaylistRec />
                <PlaylistRec />
