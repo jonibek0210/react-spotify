@@ -6,7 +6,7 @@ import { VscLibrary } from 'react-icons/vsc'
 import { BsPlusSquareFill } from 'react-icons/bs'
 import { FaHeart } from 'react-icons/fa'
 import { NavLink } from 'react-router-dom'
-import { useState } from 'react';
+// import { useState } from 'react';
 
 const Aside = () => {
 
@@ -42,7 +42,7 @@ const Aside = () => {
                      <li>
                         <NavLink
                            style={({ isActive }) => ({ color: isActive ? '#ffffff' : 'inherit' })}
-                           to='collection/playlists'
+                           to='collection-playlists'
                            className='flex items-center w-fit'>
                            <div className='w-[50px]'>
                               <VscLibrary size="32px" color='inherit' />

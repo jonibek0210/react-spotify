@@ -1,8 +1,10 @@
+import { useState } from "react";
+import { Outlet } from "react-router-dom";
+
 import Aside from '../components/Aside'
 import Header from "../components/Header";
 import Drawer from "../components/Drawer";
-import { useState } from "react";
-import { Outlet } from "react-router-dom";
+import Player from '../components/Player';
 
 const Layout = () => {
    const [isHide, setHide] = useState(true)
@@ -14,8 +16,9 @@ const Layout = () => {
          <div className="flex-1 h-fit px-6">
             <Header />
             <main className='pb-10'>
-              <Outlet/>
+               <Outlet />
             </main>
+            <Player />
          </div>
          {isHide === true ? <Drawer hide={() => setHide(!isHide)} /> : null}
       </div>
