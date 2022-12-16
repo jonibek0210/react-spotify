@@ -11,7 +11,7 @@ const Song = () => {
          <td className="flex-auto"></td>
          <td className="flex-0"><AiOutlineHeart size='22px' /></td>
          <td className="flex-0 max-sm:hidden">2 : 12</td>
-         <td className="max-[350px]:hidden flex-0 text-lg font-bold hidden max-sm:block rotate-90">. . .</td>
+         <td className="flex-0 text-lg font-bold hidden max-sm:block rotate-90">. . .</td>
       </tr>
    );
 }
