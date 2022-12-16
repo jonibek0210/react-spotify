@@ -17,7 +17,7 @@ const App = () => {
           <Route index element={<HomePage />} />
           <Route path='liked-songs' element={<PlaylistPage />} />
           <Route path='search' element={<SearchPage />} />
-          <Route path='collection/playlists' element={<LibraryPage />} />
+          <Route path='collection-playlists' element={<LibraryPage />} />
           <Route path='create-playlist' element={<CreatePlaylistPage />} />
         </Route>
       </Routes>
