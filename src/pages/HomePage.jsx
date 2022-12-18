@@ -1,12 +1,11 @@
 import { useEffect, useState } from 'react';
 import PlaylistRec from '../components/children/PlaylistRec';
 import PlaylistList from '../components/PlaylistList';
-// import Login from '../components/Login'
+import Login from '../components/Login'
 
 const HomePage = () => {
-   // const [data, setData] = useState([])
-   const [token, setToken] = useState()
-   console.log(token);
+   const [data, setData] = useState([])
+   const [token, setToken] = useState("")
 
    useEffect(() => {
       const hash = window.location.hash
@@ -26,34 +25,37 @@ const HomePage = () => {
       setToken(token)
    }, [])
 
-   // useEffect(() => {
-   //    setToken(localStorage.getItem('token'))
+   useEffect(() => {
+      setToken(window.localStorage.getItem('token'))
 
-   //    fetch('https://api.spotify.com/v1/me/playlists', {
-   //       headers: "application/json",
-   //       Authorization: `Bearer ${token}`
-   //    })
-   //       .then(res => res.json())
-   //       .then(data => console.log(data))
-   // }, []);
+      if (token) {
+         fetch('https://api.spotify.com/v1/me/playlists?limit=6&offset=0', {
+            headers: {
+               Authorization: `Bearer ${token}`
+            }
+         })
+            .then(res => res.json())
+            .then(data => setData(data.items))
+      }
+   }, [token]);
+   console.log(data);
 
-   // if (!token) {
-   //    return (
-   //       <Login />
-   //    )
-   // }
+   if (!token) {
+      return (
+         <Login />
+      )
+   }
+
+   const ItemComponent = () => {
+      return data.map((item, idx) => <PlaylistRec key={idx} item={item} />)
+   }
 
    return (
       <section className="">
          <div className="mt-[30px]">
             <h1 className="max-sm:text-2xl font-bold text-[39px] text-white mb-[30px]">Good afternoon</h1>
             <div className="2xl:grid-cols-3 max-sm:grid-cols-1 grid grid-cols-2 gap-4 ">
-               <PlaylistRec />
-               <PlaylistRec />
-               <PlaylistRec />
-               <PlaylistRec />
-               <PlaylistRec />
-               <PlaylistRec />
+               <ItemComponent />
             </div>
          </div>
          <PlaylistList />

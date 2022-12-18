@@ -11,7 +11,7 @@ const Header = () => {
    const navigate = useNavigate()
 
    return (
-      <header className="max-lg:py-4 max-sm:py-3 text-white py-5 flex items-center justify-between">
+      <header className="max-lg:py-4 max-sm::py-3 text-white py-5 flex items-center justify-between">
          <div className="flex items-center">
             <button onClick={() => navigate(-1)} className="max-sm:hidden p-[4px] bg-[#00000090] rounded-full mr-5">
                <IoIosArrowBack size='32' />
