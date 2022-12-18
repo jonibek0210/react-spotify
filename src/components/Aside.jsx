@@ -11,7 +11,7 @@ import { NavLink } from 'react-router-dom'
 const Aside = () => {
 
    return (
-      <aside className="max-2xl:w-[250px] max-xl:bg-gradient-to-b max-xl:from-transparent max-xl:to-[#000000] max-lg:bg-transparent max-lg:justify-center max-lg:bottom-0 max-lg:max-w-none max-lg:py-4 max-lg:w-full max-lg:h-24 max-w-[310px] h-[100vh] fixed bottom-0 left-0 bg-black max-lg:p-0 pt-[70px] px-[30px] flex-1 pb-4 z-50">
+      <aside className="max-2xl:w-[250px] max-xl:bg-gradient-to-b max-xl:from-transparent max-xl:to-[#000000] max-lg:bg-transparent max-lg:justify-center max-lg:bottom-0 max-lg:max-w-none max-lg:py-4 max-lg:w-full max-lg:h-24 max-w-[300px] h-[100vh] fixed bottom-0 left-0 bg-black max-lg:p-0 w-full pt-[70px] px-[30px] flex-1 pb-4 z-50">
          <div className="max-lg:border-b-[0px] max-lg:border-[#000000] border-b-[1px] bottom-solid border-[#282828]">
             <div className="flex flex-col gap-6 mb-5">
                <nav>
@@ -84,7 +84,7 @@ const Aside = () => {
          <div className="max-lg:hidden pt-[22px] flex flex-col gap-[18px]">
             <p className='text-[#B3B3B3] text-lg truncate cursor-pointer'>Chill Mix</p>
             <p className='text-[#B3B3B3] text-lg truncate cursor-pointer'>Happy Hits!</p>
-            <p className='text-[#B3B3B3] text-lg truncate cursor-pointer'>Anime Lofi & Chillhop Music</p>
+            <p className='text-[#B3B3B3] text-lg truncate cursor-pointer'>Animefob</p>
          </div>
       </aside>
    );

@@ -1,7 +1,7 @@
 import { createContext } from "react";
 
 const spotify = createContext({
-   CLIENT_ID: "4b568a92c1b3476d90b9b2d48dd3ef82",
+   CLIENT_ID: "45891db33d6d48f18319373c8fa19f53",
    REDIRECT_URI: "http://localhost:3000",
    AUTH_ENDPOINT: "https://accounts.spotify.com/authorize",
    RESPONSE_TYPE: "token"
