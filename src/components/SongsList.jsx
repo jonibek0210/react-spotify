@@ -1,3 +1,6 @@
+import axios from "axios";
+import { useEffect, useState } from "react";
+
 import { FaPlay } from "react-icons/fa"
 import { FiHeart, FiSearch } from "react-icons/fi"
 import { HiArrowRight } from "react-icons/hi"
@@ -5,7 +8,30 @@ import { BiTime } from 'react-icons/bi';
 
 import Song from "./children/Song";
 
-const SongsList = () => {
+const SongsList = ({ href }) => {
+   const url = href.href
+   const [data, setData] = useState([])
+   const [token, setToken] = useState("")
+
+   useEffect(() => {
+      setToken(window.localStorage.getItem('token'))
+      if (token) {
+         axios
+            .get(url, {
+               headers: {
+                  Authorization: `Bearer ${token}`
+               }
+            })
+            .then(res => setData(res.data.tracks.items))
+      }
+   }, [token]);
+
+   const tracks = data.map((item, idx) => {
+      return <Song key={idx} track={item.track} index={idx + 1} />
+   })
+
+   console.log(tracks);
+
    return (
       <div className="mt-8">
          <div className="flex justify-between items-center">
@@ -42,14 +68,7 @@ const SongsList = () => {
             </thead>
 
             <tbody className='space-y-4'>
-               <Song />
-               <Song />
-               <Song />
-               <Song />
-               <Song />
-               <Song />
-               <Song />
-               <Song />
+               {tracks}
             </tbody>
          </table>
       </div>

@@ -1,11 +1,14 @@
+import { useLocation } from "react-router-dom";
 import PlaylistOverview from "../components/PlaylistOverview";
 import SongsList from "../components/SongsList";
 
-const PlaylistPage = () => {
+const PlaylistPage = ({ item }) => {
+   const { state } = useLocation()
+
    return (
       <div>
-         <PlaylistOverview/>
-         <SongsList/>
+         <PlaylistOverview name={state.name} />
+         <SongsList href={state} />
       </div>
    );
 }
