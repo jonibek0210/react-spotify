@@ -19,7 +19,7 @@ const Drawer = ({ hide }) => {
                </div>
             </div>
 
-            <div className="mt-10">z
+            <div className="mt-10">
                <p className="text-[18px] text-[#CCCCCC] font-medium">Let friends and followers on Spotify see what you’re listening to.</p>
             </div>
 

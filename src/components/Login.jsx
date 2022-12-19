@@ -5,7 +5,7 @@ const Login = () => {
    const { CLIENT_ID, REDIRECT_URI, AUTH_ENDPOINT, RESPONSE_TYPE } = useContext(spotify)
 
    return (
-      <div className="bg-black flex justify-center w-full h-full fixed top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4 z-10">
+      <div className="bg-black flex justify-center w-full h-full fixed top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4 z-[100]">
          <div className="w-full max-w-[600px] bg-[#3a3a3a] text-white p-5 rounded-lg fixed top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4 z-20">
             <div className="font-medium">
                <p className="mb-5 text-[18px]">
