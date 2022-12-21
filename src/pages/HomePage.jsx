@@ -46,6 +46,7 @@ const HomePage = () => {
    }
 
    function renderItems(arr) {
+      console.log(arr);
       const items = arr.map((item, idx) => {
          return (
             <div onClick={() => goToPlaylist(item)} key={idx} className="flex rounded-md overflow-hidden bg-[#ffffff20] w-full cursor-pointer">
