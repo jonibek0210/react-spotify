@@ -4,6 +4,7 @@ import SongsList from "../components/SongsList";
 
 const PlaylistPage = ({ item, images }) => {
    const { state } = useLocation()
+   console.log(state);
 
    return (
       <div>
