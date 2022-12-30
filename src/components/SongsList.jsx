@@ -30,8 +30,6 @@ const SongsList = ({ href }) => {
       return <Song key={idx} track={item.track} index={idx + 1} />
    })
 
-   console.log(tracks);
-
    return (
       <div className="mt-8">
          <div className="flex justify-between items-center">

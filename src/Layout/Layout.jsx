@@ -13,7 +13,7 @@ const Layout = () => {
       <div className="flex relative max-2xl:pl-[250px] max-lg:pl-0 pl-[290px]">
          <div className="h-[510px] w-full absolute z-[-1] left-0 top-0 bg-gradient-to-b from-[#3333A3] to-[#121212]"></div>
          <Aside />
-         <div className="flex-1 h-fit px-6">
+         <div className="flex-1 h-fit px-10">
             <Header />
             <main className='pb-10'>
                <Outlet />

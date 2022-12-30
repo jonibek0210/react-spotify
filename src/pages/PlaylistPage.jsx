@@ -7,7 +7,7 @@ const PlaylistPage = ({ item }) => {
 
    return (
       <div>
-         <PlaylistOverview name={state.name} />
+         <PlaylistOverview state={state} />
          <SongsList href={state} />
       </div>
    );

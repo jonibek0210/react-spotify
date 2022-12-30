@@ -2,7 +2,6 @@ import { AiOutlineHeart } from 'react-icons/ai';
 
 const Song = ({ track, index }) => {
    const { name, artists, album, duration } = track
-   console.log(track);
 
    return (
       <tr className="max-sm:gap-3 flex gap-5 text-white font-bold items-center">
