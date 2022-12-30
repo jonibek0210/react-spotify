@@ -1,35 +1,18 @@
-import { useEffect, useState } from 'react';
-import PlaylistList from '../components/PlaylistList';
-import Login from '../components/Login'
+import { useContext, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+
+import PlaylistList from '../components/PlaylistList';
 import axios from 'axios'
+
+import TOKEN from "../contexts/token";
 
 const HomePage = () => {
    const [data, setData] = useState([])
-   const [token, setToken] = useState("")
    const navigate = useNavigate()
 
-   useEffect(() => {
-      const hash = window.location.hash
-      let token = window.localStorage.getItem("token")
-
-      if (!token && hash) {
-         token = hash
-            .substring(1)
-            .split("&")
-            .find((elem) => elem.startsWith("access_token"))
-            .split("=")[1]
-
-         window.location.href = ""
-         window.localStorage.setItem("token", token)
-      }
-
-      setToken(token)
-   }, [])
+   const token = useContext(TOKEN);
 
    useEffect(() => {
-      setToken(window.localStorage.getItem('token'))
-
       if (token) {
          axios
             .get('https://api.spotify.com/v1/me/playlists?limit=6&offset=0', {
@@ -64,12 +47,6 @@ const HomePage = () => {
    }
 
    const items = renderItems(data)
-
-   if (!token) {
-      return (
-         <Login />
-      )
-   }
 
    return (
       <section className="">
